@@ -1,7 +1,8 @@
 ---
 import Layout from '../layouts/Layout.astro';
 import Calendar from'../components/Calendar.astro'
-
+import Map from '../components/Map';
+import ScrollImgs from '../components/ScrollImgs';
 ---
 
 <Layout title="嘉凱&宜慧婚禮" headerContent="嘉凱與宜慧的婚禮">
@@ -10,12 +11,13 @@ import Calendar from'../components/Calendar.astro'
 			<img src='https://res.cloudinary.com/dlxrcak5o/image/upload/v1702137650/TaiwanWeddingProject/JHI03053_lhldv8.jpg' alt='coverPic' class="w-full h-full object-cover my-image" style="object-position: center 20%;"/>
 		</div>
 			
-		<div class="my-7 mx-1 text-lg md:my-16 md:text-5xl">
+		<div class="mt-10 mx-1 text-lg md:mt-44 md:text-5xl">
 			民國一一三年 國曆三月一日 星期五
 		</div>
-		<div class="mx-5 text-sm md:my-1 md:text-2xl">
+		<div class="my-10 mx-5 text-sm md:my-44 md:mx-48 md:text-2xl text-neutral-500">
 			２０２４／３／１，我們將在屏東打鐵村宜慧家舉行臺灣場宴客，宜慧的妹妹(宜君)也會在當天早上舉辦訂婚儀式！我們想帶給大家一個中西合併的庭院婚禮，西式雞尾酒時間、傳統中式辦桌料理、以及喝不完的酒配上南部的好天氣。我們邀請各位穿上西裝和禮服來享受這愜意隨性又派對玩樂的一天！
 		</div>
+		<ScrollImgs />
 		<Calendar
 			event="雞尾酒時間"
 			time="3:00pm" 
@@ -24,6 +26,7 @@ import Calendar from'../components/Calendar.astro'
 			event="晚餐"
 			time="6:00pm" 
 		/>
+		<Map />
 		
 	</main>
 </Layout>
