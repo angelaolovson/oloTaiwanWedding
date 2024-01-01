@@ -1,13 +1,11 @@
 ---
-import Navbar from '../components/NavBar.tsx'
-import Header from '../components/Header.tsx'
+import Navbar from '../components/Navbar'
 
 interface Props {
-	title: string;
-	headerContent: string;
+	title: string
 }
 
-const { title, headerContent } = Astro.props;
+const { title } = Astro.props;
 ---
 
 <!doctype html>
@@ -22,7 +20,6 @@ const { title, headerContent } = Astro.props;
 	</head>
 	<body>
 		<Navbar />
-		<Header content={headerContent} />
 		<slot />
 	</body>
 </html>

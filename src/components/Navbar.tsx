@@ -1,13 +1,34 @@
-import React from 'react';
+import React, { useState } from 'react';
 
 const Navbar: React.FC = () => {
+    const [isOpenState, setIsOpenState] = useState(false);
+
+    //add the active class
+    const toggleNavbar = () => {
+        setIsOpenState(!isOpenState);
+    }
+
+      //clean up function to remove the active class
+    const removeActive = () => {
+        setIsOpenState(false)
+    }
     return (
-        <div style={{ height: "10vh" }} className="bg-navFooter flex items-center justify-center">
-            <div className="flex flex-row justify-around w-full max-w-screen-md">
-                <a href="/">Home</a>
-                <a href="/photo">Photo</a>
+        <nav>
+            <div>
+                Kyle & Angela
             </div>
-        </div>
+
+            <div>
+                <ul>
+                    <li>
+                        <a href="/">Home</a>
+                    </li>
+                    <li>
+                        <a href="/photo/">Photo</a>
+                    </li>
+                </ul>
+            </div>
+        </nav>
     );
 }
 
