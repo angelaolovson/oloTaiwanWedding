@@ -1,22 +1,66 @@
 ---
 import Layout from '../layouts/Layout.astro';
-import Card from '../components/Card.astro';
+import PhotoGrid from '../components/PhotoGrid';
+
+const content = [
+	{
+		mainImage:'https://res.cloudinary.com/dlxrcak5o/image/upload/v1704168914/TaiwanWeddingProject/First%20Look/firstLook_3_obwuih.jpg',
+		title:'First Look',
+		modalImages: 
+			[
+				'https://res.cloudinary.com/dlxrcak5o/image/upload/v1704168912/TaiwanWeddingProject/First%20Look/firstLook_1_qqobuu.jpg',
+				'https://res.cloudinary.com/dlxrcak5o/image/upload/v1704168916/TaiwanWeddingProject/First%20Look/firstLook_2_oki0ze.jpg',
+				'https://res.cloudinary.com/dlxrcak5o/image/upload/v1704168914/TaiwanWeddingProject/First%20Look/firstLook_3_obwuih.jpg',
+				'https://res.cloudinary.com/dlxrcak5o/image/upload/v1704168906/TaiwanWeddingProject/First%20Look/firstLook_4_ddjdgr.jpg',
+				'https://res.cloudinary.com/dlxrcak5o/image/upload/v1704168913/TaiwanWeddingProject/First%20Look/firstLook_5_qyok3h.jpg',
+				'https://res.cloudinary.com/dlxrcak5o/image/upload/v1704168909/TaiwanWeddingProject/First%20Look/firstLook_6_bhfimg.jpg',
+				'https://res.cloudinary.com/dlxrcak5o/image/upload/v1704168907/TaiwanWeddingProject/First%20Look/firstLook_7_jigaqv.jpg',
+				'https://res.cloudinary.com/dlxrcak5o/image/upload/v1704168903/TaiwanWeddingProject/First%20Look/firstLook_8_qdu1su.jpg',
+				'https://res.cloudinary.com/dlxrcak5o/image/upload/v1704168903/TaiwanWeddingProject/First%20Look/firstLook_9_z0ox4t.jpg',
+				'https://res.cloudinary.com/dlxrcak5o/image/upload/v1704168916/TaiwanWeddingProject/First%20Look/firstLook_10_nzslk3.jpg'
+			]
+	},
+	{
+		mainImage:'https://res.cloudinary.com/dlxrcak5o/image/upload/v1704168925/TaiwanWeddingProject/walkDown/walkDown_11_wkjiy3.jpg',
+		title:'Walk Down The Aisle',
+		modalImages: 
+			[
+				'https://res.cloudinary.com/dlxrcak5o/image/upload/v1704168927/TaiwanWeddingProject/walkDown/walkDown_1_mmhxjf.jpg',
+				'https://res.cloudinary.com/dlxrcak5o/image/upload/v1704168924/TaiwanWeddingProject/walkDown/walkDown_2_khbm5m.jpg',
+				'https://res.cloudinary.com/dlxrcak5o/image/upload/v1704168922/TaiwanWeddingProject/walkDown/walkDown_3_fnc38q.jpg',
+				'https://res.cloudinary.com/dlxrcak5o/image/upload/v1704168927/TaiwanWeddingProject/walkDown/walkDown_4_v5sx89.jpg',
+				'https://res.cloudinary.com/dlxrcak5o/image/upload/v1704168922/TaiwanWeddingProject/walkDown/walkDown_5_brmawy.jpg',
+				'https://res.cloudinary.com/dlxrcak5o/image/upload/v1704168923/TaiwanWeddingProject/walkDown/walkDown_6_wldghr.jpg',
+				'https://res.cloudinary.com/dlxrcak5o/image/upload/v1704168912/TaiwanWeddingProject/walkDown/walkDown_7_dpxfwx.jpg',
+				'https://res.cloudinary.com/dlxrcak5o/image/upload/v1704168916/TaiwanWeddingProject/walkDown/walkDown_8_hwdsqt.jpg',
+				'https://res.cloudinary.com/dlxrcak5o/image/upload/v1704168918/TaiwanWeddingProject/walkDown/walkDown_9_rpwvjx.jpg',
+				'https://res.cloudinary.com/dlxrcak5o/image/upload/v1704168925/TaiwanWeddingProject/walkDown/walkDown_10_qjvqxe.jpg',
+				'https://res.cloudinary.com/dlxrcak5o/image/upload/v1704168925/TaiwanWeddingProject/walkDown/walkDown_11_wkjiy3.jpg'
+			]
+	},
+	{
+		mainImage:'',
+		title:'Text',
+		modalImages: 
+			[
+				'',
+				'',
+				'',
+			]
+	},
+];
 ---
 
-<Layout title="美國婚禮花絮">
-	<main>
-		<h1>Photo</h1>
+<Layout title="婚禮花絮">
+	<main class="flex flex-col items-center text-xl md:text-3xl">
+		<h1 class='p-3 '>公證與美國場婚禮花絮</h1>
 		<div>
-			<Card
-				href="https://docs.astro.build/"
-				title="Documentation"
-				body="Learn how Astro works and explore the official API docs."
-			/>
-			<Card
-				href="https://astro.build/integrations/"
-				title="Integrations"
-				body="Supercharge your project with new frameworks and libraries."
-			/>
-		</div>
+            {content.map((item, index) => (
+                // Use a Fragment to apply the key
+                <Fragment key={index}> 
+                    <PhotoGrid client:load mainImage={item.mainImage} title={item.title} modalImages={item.modalImages} />
+                </Fragment>
+            ))}
+        </div>
 	</main>
 </Layout>
