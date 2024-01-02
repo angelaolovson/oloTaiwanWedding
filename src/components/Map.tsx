@@ -2,7 +2,7 @@ import React from "react";
 
 const Map: React.FC = () => {
     return (
-        <div className="flex flex-col w-full items-center justify-center bg-navFooter">
+        <div className="flex flex-col w-full items-center justify-center bg-navFooter py-8">
             <div className="text-xl md:text-3xl">
                 婚禮地址
             </div>
@@ -20,11 +20,11 @@ const Map: React.FC = () => {
                     title="Wedding Location Map">
                 </iframe>
             </div>
-            <div className="text-sm md:text-2xl mt-5 mb-3 md:mt-10 md:mb-5 text-neutral-700">
-                強烈建議用坐標定位（不然Google會導航到一家麵店lol）
+            <div className="text-blue-800 text-base md:text-2xl my-5 md:my-10">
+                <a href="https://maps.app.goo.gl/ahRuWjZFq5QN2yQw5" className="text-neutral-700 hover:text-blue-800">22°29'36.2"N 120°32'31.4"E</a>
             </div>
-            <div className="text-blue-800 text-base md:text-2xl mb-5 md:mb-10">
-            <a href="https://maps.app.goo.gl/ahRuWjZFq5QN2yQw5" className="text-neutral-500 hover:text-blue-800">22°29'36.2"N 120°32'31.4"E</a>
+            <div className="text-sm md:text-2xl text-neutral-500">
+                強烈建議用坐標定位（不然Google會導航到一家麵店lol）
             </div>
         </div>
     );
