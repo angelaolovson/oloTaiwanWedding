@@ -16,18 +16,18 @@ import DressCode from '../components/DressCode';
 			民國一一三年 國曆三月一日 星期五
 		</div>
 		<div class="my-10 mx-5 md:my-44 md:mx-48 text-neutral-500">
-			２０２４／３／１，我們將在屏東打鐵村宜慧家舉行臺灣場宴客，宜慧的妹妹(宜君)也會在當天早上舉辦訂婚儀式！我們想帶給大家一個中西合併的庭院婚禮，西式雞尾酒時間、傳統中式辦桌料理、以及喝不完的酒配上南部的好天氣。我們邀請各位穿上西裝和禮服來享受這愜意隨性又派對玩樂的一天！
+			２０２４／３／１，我們將在屏東打鐵村林家舉行宜君(宜慧的妹妹)文定家宴＋宜慧的臺灣場宴客！我們想帶給大家一個中西合併的庭院婚禮，西式雞尾酒時間、傳統中式辦桌料理、以及喝不完的酒配上南部的好天氣。我們邀請各位穿上西裝和禮服來享受這愜意隨性又派對玩樂的一天！
 		</div>
 
 		<ScrollImgs />
 
-		<div class="border-2 p-4 mb-14 md:mb-44">
+		<div class="border-2 p-4 mb-14 md:mb-44 flex flex-col justify-center items-center">
 			<Calendar
 				event="雞尾酒時間"
 				time="3:00pm" 
 				menu='青蛙老弟烘焙點心 · 現榨果汁 · 紅酒啤酒 · 時令水果'
 			/>
-			<div class="rounded-full">try to make a round dot here</div>
+			<div class="rounded-full">-</div>
 			<Calendar
 				event="晚餐"
 				time="6:00pm" 
@@ -35,43 +35,47 @@ import DressCode from '../components/DressCode';
 			/>
 		</div>
 
-		<!-- DressCode -->
-		<div class="my-14 h-20vh bgImg">
-			<div>Dress Code - move above map and give a back ground pic? faded</div>
-			<div>Garden Formal，no white</div>
-		</div>
-
 		<Map />
 
 		<!-- transportation -->
-		<div class="my-14">
-			<div>driving and stay</div>
-			<div>train/high speed rail?</div>
-			<div>taxi</div>
+		<div class="my-14 flex flex-col justify-center items-center border-2 py-12 px-8">
+			<div class="text-xl md:text-5xl mb-3">大眾交通</div>
+			<div class="my-2">高鐵新左營站 -> 轉台鐵 ->台鐵潮州站</div>
+			<div>台鐵潮州站外有計程車</div>
 		</div>
 
-		
+		<!-- DressCode -->
+		<div class="h-30vh w-full bgImg flex justify-center items-center">
+			<div class="flex flex-col justify-center items-center" style="height: 70%; width: 75%; background-color: rgba(255, 255, 255, 0.4);">
+				<div class="text-xl md:text-5xl my-3">Dress Code</div>
+				<div>Garden Formal / 無白色&米色洋裝</div>
+			</div>
+		</div>
+
 		<!-- 注意事項 -->
-		<div class="my-14">
-			<div></div>
+		<div class="my-14 flex flex-col justify-center items-center border-2 py-12 px-5">
+			<div class="text-xl md:text-5xl mb-3">注意事項</div>
+			<div class="mb-2">地點為戶外庭院，建議防蚊液＋舒適鞋備用</div>
+			<div class="mb-2">當天有提供酒精飲料，飲酒不開車</div>
 			<div></div>
 		</div>
 
 		<!-- 接待 -->
-		<div class="my-14">
-			<div>林孟頡</div>
-			<div>phone number</div>
-			<div>當天有任何問題請聯絡我弟</div>
+		<div class="flex flex-col w-full items-center justify-center bg-navFooter pt-14 pb-24">
+			<div class="text-xl md:text-5xl mb-3">當天有任何問題請聯絡我弟</div>
+			<div class="text-lg md:text-5xl mb-1">林孟頡</div>
+			<div class="text-lg md:text-5xl mb-1">0921185285</div>
 		</div>
 
+
 		<style>
-			.h-20vh {
-				height: 20vh;
+			.h-30vh {
+				height: 29vh;
 			}
 			.bgImg {
 				background-image: url('/dresscodeBG.jpg');
-				background-size: auto 100%; /* Scale the image's height to match the div's height */
-				background-position: center; /* Center the image */
+				background-size: cover; /* Scale the image's height to match the div's height */
+				background-position: left; /* Center the image */
 				background-repeat: no-repeat; /* Prevent the image from repeating */
 				opacity: 0.7; /* This will make your image faded */
 			}
