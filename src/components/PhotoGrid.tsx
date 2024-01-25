@@ -19,9 +19,11 @@ const PhotoGrid: React.FC<PhotoGridProps> = ({mainImage, title, modalImages}) =>
     }
 
     return (
-        <div className='flex flex-col items-center mb-5'>
-            <img src={mainImage} alt="" className="inline-block h-full object-contain" />
-            <div className="cursor-pointer text-blue-500 hover:text-blue-700" onClick={handleOpenModal}>{title}</div>
+        <div className='flex items-center justify-center text-center mb-5 md:p-2 md:text-xl'>
+            <div >
+                <img src={mainImage} alt="" className="cursor-pointer inline-block h-full object-contain" onClick={handleOpenModal}/>
+                <div className=" text-gray-500 hover:text-gray-700" >{title}</div>
+            </div>
 
             {showModal && (
                 <div className="fixed inset-0 bg-black bg-opacity-40 z-50 overflow-y-auto">

@@ -88,9 +88,10 @@ const content = [
 ---
 
 <Layout title="婚禮花絮">
-	<main class="flex flex-col items-center text-xl md:text-3xl">
-		<h1 class='p-3 '>公證與美國場婚禮花絮</h1>
-		<div>
+	<main class="flex flex-col items-center text-xl md:text-3xl ">
+		<h1 class='p-3 italic'>婚禮花絮</h1>
+
+		<div class="grid grid-cols-1 md:grid-cols-2 gap-4 w-full md:p-10">
             {content.map((item, index) => (
                 // Use a Fragment to apply the key
                 <Fragment key={index}> 

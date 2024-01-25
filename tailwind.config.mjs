@@ -9,6 +9,9 @@ export default {
 			fontSize: {
 				'20md': '20px',
 			},
+			height: {
+				'mdSize': '36vh',
+			},
 		},
 	},
 	plugins: [],

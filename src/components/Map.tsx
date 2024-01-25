@@ -3,7 +3,7 @@ import React from "react";
 const Map: React.FC = () => {
     return (
         <div className="flex flex-col w-full items-center justify-center bg-navFooter py-14">
-            <div className="text-xl md:text-3xl">
+            <div className="text-xl md:text-4xl">
                 婚禮地址
             </div>
             <div className="text-lg md:text-2xl mt-1 mb-5 md:mt-7 md:mb-10 text-neutral-500">
