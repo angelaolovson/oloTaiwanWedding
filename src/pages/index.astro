@@ -44,8 +44,9 @@ import ScrollImgs from '../components/ScrollImgs';
 		</div>
 
 		<!-- DressCode -->
-		<div class="h-[30vh] md:h-[60vh] w-full bgImg flex justify-center items-center">
-			<div class="flex flex-col justify-center items-center md:py-24" style="height: 70%; width: 75%; background-color: rgba(255, 255, 255, 0.4);">
+		<div class="relative w-full max-w-[100vw] overflow-hidden">
+			<img src='https://res.cloudinary.com/dlxrcak5o/image/upload/v1706311998/TaiwanWeddingProject/dresscodeBG_dbpnle.jpg' alt='arch' class="w-full h-full object-cover my-image" style="object-position: center 20%;"/>
+			<div class="absolute top-1/2 left-0 w-full transform -translate-y-1/2 bg-white bg-opacity-50 text-center">
 				<div class="text-xl md:text-4xl my-3 md:mb-7">Dress Code</div>
 				<div class="mb-2 md:mb-5">Garden Formal / 無白色&米色洋裝</div>
 			</div>
@@ -68,25 +69,10 @@ import ScrollImgs from '../components/ScrollImgs';
 
 		<!-- Final -->
 		<div class="relative w-full max-w-[100vw] overflow-hidden my-container">
-			<img src='/oloTaiwanWedding/archBG.jpg' alt='arch' class="w-full h-full object-cover my-image" style="object-position: center 20%;"/>
+			<img src='https://res.cloudinary.com/dlxrcak5o/image/upload/v1706246691/TaiwanWeddingProject/fairFarm/JHI03626_mbiofg.jpg' alt='arch' class="w-full h-full object-cover my-image" style="object-position: center 20%;"/>
 			<div class="absolute top-1/2 left-0 w-full transform -translate-y-1/2 bg-white bg-opacity-50">
 				<div class="text-center text-2xl md:text-5xl text-black p-4 font-la-belle">Looking forward to having you!</div>
 			</div>
 		</div>
-
-		<style>
-			.bgImg {
-				background-image: url('/oloTaiwanWedding/dresscodeBG.jpg');
-				background-size: cover; /* Scale the image's height to match the div's height */
-				background-position: left; /* Center the image */
-				background-repeat: no-repeat; /* Prevent the image from repeating */
-			}
-			.archImg {
-				background-image: url('/oloTaiwanWedding/archBG.jpg');
-				background-size: cover; /* Scale the image's height to match the div's height */
-				background-position: left; /* Center the image */
-				background-repeat: no-repeat; /* Prevent the image from repeating */
-			}			
-		</style>
 	</main>
 </Layout>
