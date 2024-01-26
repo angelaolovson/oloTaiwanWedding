@@ -12,6 +12,9 @@ export default {
 			height: {
 				'mdSize': '36vh',
 			},
+			fontFamily: {
+                'la-belle': ['"La Belle Aurore"', 'cursive'],
+            },
 		},
 	},
 	plugins: [],
