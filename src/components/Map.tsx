@@ -7,7 +7,7 @@ const Map: React.FC = () => {
                 婚禮地址
             </div>
             <div className="text-lg md:text-2xl mt-1 mb-5 md:mt-7 md:mb-10 text-neutral-500">
-                <a href="https://maps.app.goo.gl/ahRuWjZFq5QN2yQw5" className="text-neutral-500 hover:text-blue-800">宜慧家：屏東縣新埤鄉打鐵村東興路164號</a>
+                <div className="text-neutral-500 hover:text-blue-800">宜慧家：屏東縣新埤鄉打鐵村東興路164號</div>
                 
             </div>
             <div className="w-full h-[40vh] md:w-[70vw] md:h-[50vh] mb-5 md:mb-10">
@@ -21,7 +21,7 @@ const Map: React.FC = () => {
                 </iframe>
             </div>
             <div className="text-blue-800 text-lg md:text-2xl">
-                <a href="https://maps.app.goo.gl/ahRuWjZFq5QN2yQw5" className="text-neutral-700 hover:text-blue-800">22°29'36.2"N 120°32'31.4"E</a>
+                <div className="text-neutral-700 hover:text-blue-800">22°29'36.2"N 120°32'31.4"E</div>
             </div>
             <div className="text-sm md:text-2xl text-neutral-500">
                 請用坐標定位(不然Google會導航到一家麵店lol)
