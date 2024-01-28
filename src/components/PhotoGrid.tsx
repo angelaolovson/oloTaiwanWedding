@@ -33,7 +33,7 @@ const PhotoGrid: React.FC<PhotoGridProps> = ({mainImage, title, modalImages}) =>
                         <span className="text-4xl font-bold text-gray-700 cursor-pointer float-right" onClick={handleCloseModal}>&times;</span>
                         <div>
                             {modalImages.map((image, index) => (
-                                <img key={index} src={image} alt="" className="inline-block h-full object-contain my-1" />
+                                <img key={index} src={image} alt="" className="my-1" />
                             ))}
                         </div>
                     </div>
