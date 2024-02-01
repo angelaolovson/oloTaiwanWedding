@@ -1,0 +1,97 @@
+---
+import Layout from '../layouts/Layout.astro';
+import Table from '../components/Table.astro';
+
+const content = [
+	{
+		table:'桌號 1',
+		names: 
+			[
+				'李其霖',
+                '林琬宜',
+                '閻侑君',
+                '許嘉真',
+                '林天佑',
+                '蔡天敏',
+                '蔡克繁',
+			]
+	},
+	{
+		table:'桌號 2',
+		names: 
+			[
+				'李其霖',
+                '林琬宜',
+                '閻侑君',
+                '許嘉真',
+                '林天佑',
+                '蔡天敏',
+                '蔡克繁',
+			]
+	},
+	{
+		table:'桌號 3',
+		names: 
+			[
+				'李其霖',
+                '林琬宜',
+                '閻侑君',
+                '許嘉真',
+                '林天佑',
+                '蔡天敏',
+                '蔡克繁',
+			]
+	},
+	{
+		table:'桌號 1',
+		names: 
+			[
+				'李其霖',
+                '林琬宜',
+                '閻侑君',
+                '許嘉真',
+                '林天佑',
+                '蔡天敏',
+                '蔡克繁',
+			]
+	},
+	{
+		table:'桌號 2',
+		names: 
+			[
+				'李其霖',
+                '林琬宜',
+                '閻侑君',
+                '許嘉真',
+                '林天佑',
+                '蔡天敏',
+                '蔡克繁',
+			]
+	},
+	{
+		table:'桌號 3',
+		names: 
+			[
+				'李其霖',
+                '林琬宜',
+                '閻侑君',
+                '許嘉真',
+                '林天佑',
+                '蔡天敏',
+                '蔡克繁',
+			]
+	},
+];
+---
+
+<Layout title="座位表">
+	<main class="flex flex-col items-center text-xl md:text-3xl ">
+		<h1 class='py-10 italic'>座位表</h1>
+
+		<div class="grid grid-cols-1 md:grid-cols-3 gap-4 w-full md:p-2 md:gap-8">
+            {content.map((item) => (
+                <Table table={item.table} names={item.names} />
+            ))}            
+        </div>
+	</main>
+</Layout>

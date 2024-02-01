@@ -1,0 +1,18 @@
+---
+interface Props {
+	table: string;
+	names: string[];
+}
+
+const { table, names } = Astro.props;
+---
+
+<div class="p-4 py-6 mx-8 border-2">
+    <div class="mb-3 text-center font-bold">{table}</div>
+    <ul class="grid grid-cols-2 gap-">
+        {names.map(name => (
+            <li class="flex justify-center items-center ">{name}</li>
+        ))}
+    </ul>
+</div>
+
