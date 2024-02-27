@@ -1,97 +1,94 @@
 ---
-import Layout from '../layouts/Layout.astro';
-import Table from '../components/Table.astro';
+import Layout from "../layouts/Layout.astro";
+import Table from "../components/Table.astro";
 
 const content = [
-	{
-		table:'桌號 1',
-		names: 
-			[
-				'李其霖',
-                '林琬宜',
-                '閻侑君',
-                '許嘉真',
-                '林天佑',
-                '蔡天敏',
-                '蔡克繁',
-			]
-	},
-	{
-		table:'桌號 2',
-		names: 
-			[
-				'李其霖',
-                '林琬宜',
-                '閻侑君',
-                '許嘉真',
-                '林天佑',
-                '蔡天敏',
-                '蔡克繁',
-			]
-	},
-	{
-		table:'桌號 3',
-		names: 
-			[
-				'李其霖',
-                '林琬宜',
-                '閻侑君',
-                '許嘉真',
-                '林天佑',
-                '蔡天敏',
-                '蔡克繁',
-			]
-	},
-	{
-		table:'桌號 1',
-		names: 
-			[
-				'李其霖',
-                '林琬宜',
-                '閻侑君',
-                '許嘉真',
-                '林天佑',
-                '蔡天敏',
-                '蔡克繁',
-			]
-	},
-	{
-		table:'桌號 2',
-		names: 
-			[
-				'李其霖',
-                '林琬宜',
-                '閻侑君',
-                '許嘉真',
-                '林天佑',
-                '蔡天敏',
-                '蔡克繁',
-			]
-	},
-	{
-		table:'桌號 3',
-		names: 
-			[
-				'李其霖',
-                '林琬宜',
-                '閻侑君',
-                '許嘉真',
-                '林天佑',
-                '蔡天敏',
-                '蔡克繁',
-			]
-	},
+  {
+    table: "道明",
+    names: [
+      "李其霖",
+      "簡宇亨",
+      "張家銘",
+      "張捷中",
+      "郭庭庭",
+      "莊士毅",
+      "張菀絢",
+      "黃怡潔",
+      "蔡尚穎",
+      "蕭菀伶",
+    ],
+  },
+  {
+    table: "道明 / 潮中",
+    names: ["柯榮泰", "張卉薐", "鄭安修", "蔡家揚", "陳柏侃", "張羽汶"],
+  },
+  {
+    table: "Who we met in the US",
+    names: [
+		"蒲宜婕",
+		"林歐文",
+		"邱偉綾",
+		"林泑伃",
+		"鄭凱庭",
+		"林天佑",
+		'邱建智',
+		"趙婕",
+		"蕭蓉",
+		'張凱淵',
+		"黃凡鳴",
+    ],
+  },
+  {
+    table: "COS 8",
+    names: [
+      "閻侑君",
+	  '蔡宛育',
+	  '滕家吟',
+	  '李家瑜',
+	  '胡翊蘋',
+	  '蘇泓廣',
+	  '徐曼庭',
+	  '郭明暉',
+    ],
+  },
+  {
+    table: "CMU Dance 13",
+    names: [
+		'陳羿儒',
+		'李俊頡',
+		'王樂婷',
+		'麥美娟',
+	  	'徐栢逵',
+	  	'楊千慧',
+	  	'吳泠萱',
+		'張立人',
+	  	'劉佳宜',
+	  	'黃立杰',
+    ],
+  },
+  {
+    table: "CMU Dance",
+    names: [
+      "林琬宜",
+      "蔡克繁",
+      "許嘉真",
+	  '蔡正晏',
+	  '王偉勳',
+	  '林冠宏',
+	  '蔡承晏',
+	  '徐夢孺',
+	  '陳維展',
+    ],
+  },
 ];
 ---
 
 <Layout title="座位表">
-	<main class="flex flex-col items-center text-xl md:text-3xl ">
-		<h1 class='py-10 italic'>座位表</h1>
+  <main class="flex flex-col items-center text-xl md:text-3xl">
+    <h1 class="py-10 italic">座位表</h1>
 
-		<div class="grid grid-cols-1 md:grid-cols-3 gap-4 w-full md:p-2 md:gap-8">
-            {content.map((item) => (
-                <Table table={item.table} names={item.names} />
-            ))}            
-        </div>
-	</main>
+    <div class="grid grid-cols-1 md:grid-cols-3 gap-4 w-full md:p-2 md:gap-8">
+      {content.map((item) => <Table table={item.table} names={item.names} />)}
+    </div>
+  </main>
 </Layout>
